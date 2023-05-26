@@ -14,7 +14,7 @@ const App = () => {
   // For post task to the server
   const [tasks, setTasks] = useState([]);
 
-  // For loading data
+  // For loading data`
   const [loading, setLoading] = useState(true);
 
   // For error data
@@ -35,7 +35,7 @@ const App = () => {
   const fetchingData = async () => {
     try {
       const res = await fetch(
-        "https://hallowed-ambitious-mouth.glitch.me/tasks"
+        "https://todo-server-lqtf.onrender.com/tasks"
       );
       if (!res.ok) throw new Error("Something Went Wrong!");
       const data = await res.json();
@@ -58,7 +58,7 @@ const App = () => {
   // Delete Data Function
 
   const deleteData = async (id) => {
-    await fetch(`https://hallowed-ambitious-mouth.glitch.me/tasks/${id}`, {
+    await fetch(`https://todo-server-lqtf.onrender.com/tasks/${id}`, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json",
@@ -109,7 +109,7 @@ const App = () => {
   };
 
   const puttingRequest = async (id, newData) => {
-    fetch(`https://hallowed-ambitious-mouth.glitch.me/tasks/${id}`, {
+    fetch(`https://todo-server-lqtf.onrender.com/tasks/${id}`, {
       method: "PUT",
       headers: {
         "Content-type": "application/json",

@@ -20,7 +20,7 @@ const AddTask = ({ tasks, setTasks }) => {
   // use "text" as a property of object
   const taskPosting = async (text) => {
     const res = await fetch(
-      "https://hallowed-ambitious-mouth.glitch.me/tasks",
+      "https://todo-server-lqtf.onrender.com/tasks",
       {
         method: "POST",
         headers: {
